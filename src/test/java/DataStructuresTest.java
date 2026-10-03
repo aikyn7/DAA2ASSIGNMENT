@@ -16,10 +16,12 @@ public class DataStructuresTest {
         assertThrows(IndexOutOfBoundsException.class, () -> arr.remove(-1));
         assertThrows(IndexOutOfBoundsException.class, () -> list.add(2, 10));
 
+
         arr.add(5);
         list.add(5);
         assertEquals(5, arr.get(0));
         assertEquals(5, list.get(0));
+
 
         arr.add(5);
         list.add(5);
@@ -58,6 +60,7 @@ public class DataStructuresTest {
         assertThrows(IllegalStateException.class, heap::peekMin);
         assertThrows(IllegalStateException.class, heap::extractMin);
 
+        // Вставка случайных элементов
         int n = 1000;
         for (int i = 0; i < n; i++) {
             int val = rand.nextInt(10000);
